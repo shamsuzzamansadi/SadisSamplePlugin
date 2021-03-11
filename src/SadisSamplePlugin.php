@@ -2,7 +2,7 @@
 
 namespace SadisSamplePlugin;
 
-
+use Doctrine\DBAL\Connection;
 use Shopware\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexerRegistry;
 use Shopware\Core\Framework\Plugin;
 use Shopware\Core\Framework\Plugin\Context\ActivateContext;
@@ -32,5 +32,11 @@ class SadisSamplePlugin extends Plugin
         }
 
         //need to do something more? I do not know yet
+        $connection = $this->container->get(Connection::class);
+
+        $connection->executeUpdate('DROP TABLE IF EXISTS `sadis-sample-plugin_bundle_product`');
+        $connection->executeUpdate('DROP TABLE IF EXISTS `sadis-sample-plugin_bundle_translation`');
+        $connection->executeUpdate('DROP TABLE IF EXISTS `sadis-sample-plugin_bundle`');
+        $connection->executeUpdate('ALTER TABLE `product` DROP COLUMN `bundles`');
     }
 }

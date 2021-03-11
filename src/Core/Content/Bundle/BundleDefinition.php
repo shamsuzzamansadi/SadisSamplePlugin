@@ -3,6 +3,7 @@
 namespace SadisSamplePlugin\Core\Content\Bundle;
 
 use SadisSamplePlugin\Core\Content\Bundle\Aggregate\BundleProduct\BundleProductDefinition;
+use SadisSamplePlugin\Core\Content\Bundle\Aggregate\BundleTranslation\BundleTranslationDefinition;
 use Shopware\Core\Content\Product\ProductDefinition;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityDefinition;
 use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\PrimaryKey;
@@ -18,7 +19,7 @@ use Shopware\Core\Framework\DataAbstractionLayer\Field\TranslationsAssociationFi
 
 class BundleDefinition extends EntityDefinition
 {
-    public const ENTITY_NAME = 'sadis_sample_plugin_bundle';
+    public const ENTITY_NAME = 'sadis-sample-plugin_bundle';
 
     public function getEntityName(): string
     {
