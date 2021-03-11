@@ -1,0 +1,25 @@
+{
+  "name": "swag/plugin-skeleton",
+  "description": "Sadiz Sample plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "v0.0.1",
+  "autoload": {
+    "psr-4": {
+      "SadisSamplePlugin\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "SadisSamplePlugin\\SadisSamplePlugin",
+    "author": [
+      {
+        "name":"sadi",
+        "email": "sadi@signature-products.com"
+      }
+    ],
+    "label": {
+      "de-DE": "Sadiz Testen plugin",
+      "en-GB": "Sadiz Testing plugin"
+    }
+  }
+}
